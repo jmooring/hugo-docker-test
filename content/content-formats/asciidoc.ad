@@ -1,0 +1,18 @@
++++
+title = 'AsciiDoc'
+date = 2021-10-22T19:03:00-07:00
+draft = false
++++
+
+The build will fail under either of the following conditions:
+
+- Asciidoctor is not installed
+- The `security.exec.allow` list does not include `asciidoctor`
+
+This is a subscript in AsciiDoc markdown:
+
+> `+H~2~O+`
+
+This is how it renders:
+
+> H~2~O

@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ with .GitInfo }}
+    <p>Last Modified: {{ .AuthorDate.Format "Jan 2, 2006 3:04:05 PM" }}</p>
+  {{ end }}
+  <hr>
+  {{ .Content }}
+{{ end }}

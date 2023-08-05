@@ -1,0 +1,25 @@
+variables:
+  GIT_DEPTH: 0
+  GIT_STRATEGY: clone
+  GIT_SUBMODULE_STRATEGY: recursive
+  TZ: America/Los_Angeles
+  HUGO_BASEURL: https://jmooring.gitlab.io/hugo-docker-test/
+
+image:
+  name: veriphor/hugo:0.116.1
+
+pages:
+  script:
+    # Install Node.js dependencies
+    - "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+    # Build
+    - hugo --gc --minify
+    - pagefind --source public
+    # Compress
+    - find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec gzip -f -k {} \;
+    - find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec brotli -f -k {} \;
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
