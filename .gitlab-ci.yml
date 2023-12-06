@@ -6,7 +6,7 @@ variables:
   HUGO_BASEURL: https://jmooring.gitlab.io/hugo-docker-test/
 
 image:
-  name: veriphor/hugo:0.116.1
+  name: veriphor/hugo:0.121.0
 
 pages:
   script:
