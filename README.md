@@ -2,8 +2,9 @@
 
 Use this repository to test the [veriphor/hugo](https://hub.docker.com/r/veriphor/hugo) Docker image.
 
-Visit the live site:
+Visit the live sites:
 
+- [Built and deployed on GitHub Pages](https://jmooring.github.io/hugo-docker-test/)
 - [Built and deployed on GitLab Pages](https://jmooring.gitlab.io/hugo-docker-test/)
 
 ## Site characteristics
