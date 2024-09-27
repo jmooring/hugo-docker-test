@@ -23,6 +23,14 @@ Include content file named hugö.md|Verify Git `core.quotepath` is `false`[^1]
 
 [^1]: See [issue #9810](https://github.com/gohugoio/hugo/issues/9810). Git's `core.quotepath` setting is `false` if `/other/hugö` has a non-zero "last modified" date.
 
+## Clone and install Node.js packages
+
+```text
+git clone https://github.com/jmooring/hugo-docker-test
+cd hugo-docker-test
+npm ci
+```
+
 ## Commands
 
 The commands below assume you have aliased `dhugo` to:
