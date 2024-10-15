@@ -14,7 +14,8 @@ Description|Purpose
 Include AsciiDoc content|Verify installation of Asciidoctor
 Include Pandoc content|Verify installation of Pandoc
 Include reStructuredText content|Verify installation of Rst2html
-Add vendor prefixes to CSS rules|Verify installation of Node.js
+Add vendor prefixes to CSS rules|Verify installation of Node.js packages (postcss, postcss-cli, autoprefixer)
+Process CSS using the Tailwind CSS CLI|Verify installation of Node.js packages (tailwindcss, @tailwindcss-cli)
 Encode images to WebP|Verify installation Hugo's extended edition
 Pull content from a Hugo module|Verify installation of Git and Go
 Transpile Sass to CSS|Verify installation of Dart Sass
