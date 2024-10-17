@@ -19,10 +19,10 @@ Process CSS using the Tailwind CSS CLI|Verify installation of Node.js packages (
 Encode images to WebP|Verify installation Hugo's extended edition
 Pull content from a Hugo module|Verify installation of Git and Go
 Transpile Sass to CSS|Verify installation of Dart Sass
-Enable site search|Verify installation of Pagefind
+Enable site search|Verify installation of Pagefind[^1]
 Include content file named hugö.md|Verify Git `core.quotepath` is `false`[^2]
 
-[^1]: To include this content format you must use the `-e include-adoc-pdc-rst` command line flag.
+[^1]: To include this content format you must use the `-e extra` command line flag.
 [^2]: See [issue #9810](https://github.com/gohugoio/hugo/issues/9810). Git's `core.quotepath` setting is `false` if `/other/hugö` has a non-zero "last modified" date.
 
 ## Clone and install Node.js packages

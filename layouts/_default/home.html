@@ -2,7 +2,7 @@
 
   {{ .Content }}
 
-  {{ if eq hugo.Environment "include-adoc-pdc-rst" }}
+  {{ if eq hugo.Environment "extra" }}
     <h2>Content formats</h2>
     {{ range (where site.RegularPages "Type" "content-formats").ByTitle }}
       <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
@@ -19,14 +19,16 @@
     <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
   {{ end }}
 
-  <h2>Pagefind search</h2>
-  <link href="{{ `_pagefind/pagefind-ui.css` | relURL }}" rel="stylesheet">
-  <script src="{{ `_pagefind/pagefind-ui.js` | relURL }}" type="text/javascript"></script>
-  <div id="search"></div>
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      new PagefindUI({ element: "#search" });
-    });
-  </script>
+  {{ if eq hugo.Environment "extra" }}
+    <h2>Pagefind search</h2>
+    <link href="{{ `_pagefind/pagefind-ui.css` | relURL }}" rel="stylesheet">
+    <script src="{{ `_pagefind/pagefind-ui.js` | relURL }}" type="text/javascript"></script>
+    <div id="search"></div>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search" });
+      });
+    </script>
+  {{ end }}
 
 {{ end }}
