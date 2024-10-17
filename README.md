@@ -1,11 +1,11 @@
 # Hugo Docker Test
 
-Use this repository to test Docker containers such as:
+Use this repository to test Docker images such as:
 
 - <https://github.com/gohugoio/hugo/pkgs/container/hugo> (official)
 - <https://hub.docker.com/r/veriphor/hugo>
 
-These live sites were built with the [veriphor/hugo](https://hub.docker.com/r/veriphor/hugo) container:
+These live sites were built with a [veriphor/hugo](https://hub.docker.com/r/veriphor/hugo) container:
 
 - [Built and deployed on GitHub Pages](https://jmooring.github.io/hugo-docker-test/)
 - [Built and deployed on GitLab Pages](https://jmooring.gitlab.io/hugo-docker-test/)
@@ -30,7 +30,14 @@ To test items 7-10 you must use the `-e extra` command line flag.
 
 ## Using the official Docker image
 
-Please see the Hugo documentation for the relevant operating system:
+Clone the repository:
+
+```text
+git clone https://github.com/jmooring/hugo-docker-test
+cd hugo-docker-test
+```
+
+Then see the Hugo documentation for the relevant operating system:
 
 - [BSD](https://gohugo.io/installation/bsd/#docker-container)
 - [Linux](https://gohugo.io/installation/linux/#docker-container)
@@ -41,7 +48,7 @@ Note that the official Docker image does not support items 7-10 above.
 
 ## Using the veriphor/hugo image
 
-Clone and install Node.js packages
+Clone the repository and install the Node.js packages:
 
 ```text
 git clone https://github.com/jmooring/hugo-docker-test
@@ -64,11 +71,11 @@ dhugo server -e extra
 Build the site using a local installation of the Pagefind executable:
 
 ```text
-dhugo -e extra && ./pagefind --source public --serve
+dhugo -e extra && ./pagefind --site public --serve
 ```
 
 Build the site using the Pagefind executable within the Docker image:
 
 ```text
-docker run --rm -v .:/project -v $HOME/.cache/hugo_cache:/cache -u $(id -u):$(id -g) --network host veriphor/hugo bash -c "hugo -e extra && pagefind --source public --serve"
+docker run --rm -v .:/project -v $HOME/.cache/hugo_cache:/cache -u $(id -u):$(id -g) --network host veriphor/hugo bash -c "hugo -e extra && pagefind --site public --serve"
 ```
