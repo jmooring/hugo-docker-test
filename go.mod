@@ -1,5 +1,7 @@
 module github.com/jmooring/hosting-docker-image
 
-go 1.20
+go 1.22
 
-require github.com/jmooring/hugo-content v0.1.0 // indirect
+toolchain go1.23.2
+
+require github.com/jmooring/hugo-module-content v0.1.4 // indirect
