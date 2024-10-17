@@ -10,7 +10,7 @@ These live sites were built with the [veriphor/hugo](https://hub.docker.com/r/ve
 - [Built and deployed on GitHub Pages](https://jmooring.github.io/hugo-docker-test/)
 - [Built and deployed on GitLab Pages](https://jmooring.gitlab.io/hugo-docker-test/)
 
-The test site is designed to test various features, including:
+This site is designed to test these features and capabilities:
 
 1. Including content from a Hugo module
 1. Transpiling Sass to CSS using Dart Sass
@@ -58,17 +58,17 @@ docker run --rm -v .:/project -v $HOME/.cache/hugo_cache:/cache -u $(id -u):$(id
 Build the site without Pagefind:
 
 ```text
-dhugo server
+dhugo server -e extra
 ```
 
 Build the site using a local installation of the Pagefind executable:
 
 ```text
-dhugo && ./pagefind --source public --serve
+dhugo -e extra && ./pagefind --source public --serve
 ```
 
 Build the site using the Pagefind executable within the Docker image:
 
 ```text
-docker run --rm -v .:/project -v $HOME/.cache/hugo_cache:/cache -u $(id -u):$(id -g) --network host veriphor/hugo bash -c "hugo && pagefind --source public --serve"
+docker run --rm -v .:/project -v $HOME/.cache/hugo_cache:/cache -u $(id -u):$(id -g) --network host veriphor/hugo bash -c "hugo -e extra && pagefind --source public --serve"
 ```
