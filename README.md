@@ -22,7 +22,7 @@ Transpile Sass to CSS|Verify installation of Dart Sass
 Enable site search|Verify installation of Pagefind[^1]
 Include content file named hugö.md|Verify Git `core.quotepath` is `false`[^2]
 
-[^1]: To include this content format you must use the `-e extra` command line flag.
+[^1]: To test this characteristic you must use the `-e extra` command line flag.
 [^2]: See [issue #9810](https://github.com/gohugoio/hugo/issues/9810). Git's `core.quotepath` setting is `false` if `/other/hugö` has a non-zero "last modified" date.
 
 ## Clone and install Node.js packages
