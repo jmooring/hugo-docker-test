@@ -11,18 +11,19 @@ Visit the live sites:
 
 Description|Purpose
 :--|:--
-Include AsciiDoc content|Verify installation of Asciidoctor
-Include Pandoc content|Verify installation of Pandoc
-Include reStructuredText content|Verify installation of Rst2html
+Include AsciiDoc content|Verify installation of Asciidoctor[^1]
+Include Pandoc content|Verify installation of Pandoc[^1]
+Include reStructuredText content|Verify installation of Rst2html[^1]
 Add vendor prefixes to CSS rules|Verify installation of Node.js packages (postcss, postcss-cli, autoprefixer)
 Process CSS using the Tailwind CSS CLI|Verify installation of Node.js packages (tailwindcss, @tailwindcss-cli)
 Encode images to WebP|Verify installation Hugo's extended edition
 Pull content from a Hugo module|Verify installation of Git and Go
 Transpile Sass to CSS|Verify installation of Dart Sass
 Enable site search|Verify installation of Pagefind
-Include content file named hugö.md|Verify Git `core.quotepath` is `false`[^1]
+Include content file named hugö.md|Verify Git `core.quotepath` is `false`[^2]
 
-[^1]: See [issue #9810](https://github.com/gohugoio/hugo/issues/9810). Git's `core.quotepath` setting is `false` if `/other/hugö` has a non-zero "last modified" date.
+[^1]: To include this content format you must use the `-e include-adoc-pdc-rst` command line flag.
+[^2]: See [issue #9810](https://github.com/gohugoio/hugo/issues/9810). Git's `core.quotepath` setting is `false` if `/other/hugö` has a non-zero "last modified" date.
 
 ## Clone and install Node.js packages
 

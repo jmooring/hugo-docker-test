@@ -2,10 +2,12 @@
 
   {{ .Content }}
 
-  <h2>Content formats</h2>
-  {{ range (where site.RegularPages "Type" "content-formats").ByTitle }}
-    <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-  {{ end }}
+  {{ if eq hugo.Environment "include-adoc-pdc-rst" }}
+    <h2>Content formats</h2>
+    {{ range (where site.RegularPages "Type" "content-formats").ByTitle }}
+      <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+    {{ end }}
+  {{end}}
 
   <h2>Content from a module</h2>
   {{ range (where site.RegularPages "Type" "articles").ByTitle }}

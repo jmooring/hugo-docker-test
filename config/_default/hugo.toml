@@ -1,0 +1,17 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+title = 'Hugo Docker Test'
+enableGitInfo = true
+
+[frontmatter]
+lastmod = [':git']
+
+[[module.imports]]
+path = "github.com/jmooring/hugo-content"
+
+[[cascade]]
+[cascade.build]
+render = 'never'
+list = 'never'
+[cascade._target]
+path = '{/content-formats,/content-formats/**}'
