@@ -2,14 +2,7 @@
 
   {{ .Content }}
 
-  {{ if eq hugo.Environment "extra" }}
-    <h2>Content formats</h2>
-    {{ range (where site.RegularPages "Type" "content-formats").ByTitle }}
-      <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-    {{ end }}
-  {{end}}
-
-  <h2>Content from a module</h2>
+   <h2>Content from a Hugo module</h2>
   {{ range (where site.RegularPages "Type" "articles").ByTitle }}
     <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
   {{ end }}
@@ -20,6 +13,11 @@
   {{ end }}
 
   {{ if eq hugo.Environment "extra" }}
+    <h2>Content formats</h2>
+    {{ range (where site.RegularPages "Type" "content-formats").ByTitle }}
+      <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+    {{ end }}
+
     <h2>Pagefind search</h2>
     <link href="{{ `_pagefind/pagefind-ui.css` | relURL }}" rel="stylesheet">
     <script src="{{ `_pagefind/pagefind-ui.js` | relURL }}" type="text/javascript"></script>
