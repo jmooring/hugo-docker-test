@@ -1,9 +1,9 @@
 {
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.0-beta.8",
+    "@tailwindcss/cli": "^4.0.0-beta.10",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
-    "tailwindcss": "^4.0.0-beta.8"
+    "tailwindcss": "^4.0.0-beta.10"
   }
 }
