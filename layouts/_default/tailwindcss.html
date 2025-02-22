@@ -6,7 +6,10 @@
   <hr>
   {{ .Content }}
 
-  {{ $css := `@import "tailwindcss";` }}
+  {{ $css := `
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+  ` }}
 
   <h2>CSS</h2>
   {{ highlight (trim $css "\n") "css" }}
